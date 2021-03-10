@@ -1,0 +1,138 @@
+<form
+  #calculation="ngForm"
+  (ngSubmit)="this.onCalculate(this.output)"
+  class="container"
+>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <input
+          #input
+          [(ngModel)]="this.output"
+          class="form-control col-12"
+          id="input"
+          name="input"
+          type="text"
+        />
+      </div>
+      <hr />
+      <div class="row">
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('7')"
+          type="button"
+        >
+          7
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('8')"
+          type="button"
+        >
+          8
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('9')"
+          type="button"
+        >
+          9
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('/')"
+          type="button"
+        >
+          /
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('4')"
+          type="button"
+        >
+          4
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('5')"
+          type="button"
+        >
+          5
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('6')"
+          type="button"
+        >
+          6
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('*')"
+          type="button"
+        >
+          *
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('1')"
+          type="button"
+        >
+          1
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('2')"
+          type="button"
+        >
+          2
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('3')"
+          type="button"
+        >
+          3
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('-')"
+          type="button"
+        >
+          -
+        </button>
+        <button
+          class="btn btn-outline-info col-6"
+          (click)="this.addValue('0')"
+          type="button"
+        >
+          0
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('.')"
+          type="button"
+        >
+          .
+        </button>
+        <button
+          class="btn btn-outline-info col-3"
+          (click)="this.addValue('+')"
+          type="button"
+        >
+          +
+        </button>
+      </div>
+      <hr />
+      <div class="row">
+        <button
+          [disabled]="!this.output"
+          type="submit"
+          class="btn btn-block btn-lg btn-success col-12"
+        >
+          Enter
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

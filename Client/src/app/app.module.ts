@@ -1,15 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { CalculatorModule } from 'src/app/calculator/calculator.module'
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { AppComponent } from './app.component'
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule
-  ],
+    BrowserModule,
+    CalculatorModule],
   providers: [],
   bootstrap: [AppComponent]
 })

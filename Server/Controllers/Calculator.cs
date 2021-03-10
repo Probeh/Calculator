@@ -16,7 +16,7 @@ namespace Server.Controllers {
 			this.userManager = userManager;
 		}
 
-		[HttpGet, AllowAnonymous]
+		[HttpGet("{scheme}"), AllowAnonymous]
 		public async Task<IActionResult> StandardCalculation([FromRoute] string scheme) {
 			try {
 				var result = await this.repo.CalculateAsync(scheme);
@@ -30,7 +30,7 @@ namespace Server.Controllers {
 			}
 		}
 
-		[HttpGet("Admin"), Authorize(Policy = "ElevatedRights")]
+		[HttpGet("Admin/{scheme}"), Authorize(Policy = "ElevatedRights")]
 		public async Task<IActionResult> AdvancedCalculation([FromRoute] string scheme) {
 			try {
 				var result = await this.repo.CalculateAsync(scheme);
